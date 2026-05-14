@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="logo_container">
+            <span class="menu_icon" id="menu_btn">☰</span>
+            <img src="logoShadow2018.png" class="logo" />
+        </div>
+
+        <nav class="nav" id="nav_menu">
+            <a>Cursos</a>
+            <a>Graduação</a>
+            <a>Contato</a>
+            <a class="cta_inscreva">Inscreva-se</a>
+        </nav>
+    </div>
+
+    <script>
+        const btn = document.querySelector("#menu_btn");
+        const nav = document.querySelector("#nav_menu");
+
+     /* btn.addEvenListener("click", )
+        const msg = document.getElementById("cta_inscreva")
+        msg.textContent = "Clique Aqui"*/
+
+        btn.addEventListener("click", function() {
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+             } else {
+             nav.style.display = "flex";
+             }
+            });
+    </script>
+
+</body>
+</html>
